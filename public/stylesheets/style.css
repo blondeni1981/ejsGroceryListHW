@@ -1,0 +1,44 @@
+body {
+  background-color: beige;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+main {
+  background-color: blueviolet;
+}
+.jumbotron{
+  
+  background-color: hsl(120, 55%, 68%); /* green */
+}
+p{
+ color: black;
+}
+h2{
+  color: black;
+}
+h1{
+  background-color: darkkhaki;
+}
+input {
+  width: 50%;
+}
+div.container-fluid {
+  background-color: lightgray;
+  padding: 30px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-display: auto ;
+  color: black;
+
+}
+div.text-primary {
+  font-size: 120%;
+  color: black;
+}
+p {
+  background-color: darkkhaki;
+}
+
+
+
+

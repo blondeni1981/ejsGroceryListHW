@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+   
+<style>
+    body    { padding-top:50px; }
+</style>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+<main>
+    <div class="text-primary" id= "test1">
+        <div class="jumbotron">
+            <div class = "container">
+              <div class = "row">
+                <div class = "col-sm-12">
+            <h2 class="text-center">Add Your Grocery List</h2>
+          </div>
+          </div>
+        </div>
+     </br>
+
+
+
+      <label for="movie">Add Grocery Item</label>
+      <input class="form-control" type="text" id="groceryList" name="groceryList"><br>
+      <label for="date">Notes</label>
+      <input class="form-control" type="text" id="date" name="date"><br>
+      <button class="btn btn-primary  " onclick="updateURL();">Add Another Item </button>
+
+  </div>
+</div>
+</main>
+
+<footer>
+  <% include ../partials/footer %>
+</footer>
+<script type="text/javascript">
+// our menu calls this page URL with no ?id= value,
+// so code needs to check for that
+// when user enters data, I append the data using the required ?id=
+
+  function updateURL() {
+    // http://localhost:3000/uploadData?id=Terminator&date=1946
+    var myURL = (document.location).toString();
+    var n = myURL.indexOf("?");
+    myURL = myURL.substr(0, n); 
+    document.location = myURL + "?id=" + document.getElementById("movie").value + 
+    "&date=" +  document.getElementById("date").value;
+
+  }
+</script>
+
+</body>
+</html>

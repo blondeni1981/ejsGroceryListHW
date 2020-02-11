@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+<main>
+    <div class="text-primary">
+        <div class="jumbotron">
+            <div class = "container">
+              <div class = "row">
+                <div class = "col-sm-12">
+            <h2 class="text-center">Grocery List</h2>
+          </div>
+          </div>
+        </div>
+
+      <%if (dataArray != null) { %>
+       
+
+
+           <ul class="list-group">
+            <% for(var i=0; i<dataArray.length; i++) {%>
+              <li class="list-group-item"><%= dataArray[i] %></li>
+            <% } %>
+          </ul> 
+
+         
+        <% } %>
+          
+
+  </div>
+</main>
+
+<footer>
+  <% include ../partials/footer %>
+</footer>
+<script type="text/javascript">
+// our menu calls this page URL with no ?id= value,
+// so code needs to check for that
+// when user enters data, I append the data using the required ?id=
+
+  function updateURL() {
+    // http://localhost:3000/uploadData?id=Terminator
+    var myURL = (document.location).toString();
+    var n = myURL.indexOf("?");
+    myURL = myURL.substr(0, n); 
+    document.location = myURL + "?id=" + document.getElementById("movie").value;
+
+  }
+</script>
+
+</body>
+</html>
