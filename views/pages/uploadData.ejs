@@ -32,7 +32,7 @@
       <label for="movie">Add Grocery Item</label>
       <input class="form-control" type="text" id="groceryList" name="groceryList"><br>
       <label for="date">Notes</label>
-      <input class="form-control" type="text" id="date" name="date"><br>
+      <input class="form-control" type="text" id="note" name="date"><br>
       <button class="btn btn-primary  " onclick="updateURL();">Add Another Item </button>
 
   </div>
@@ -52,8 +52,8 @@
     var myURL = (document.location).toString();
     var n = myURL.indexOf("?");
     myURL = myURL.substr(0, n); 
-    document.location = myURL + "?id=" + document.getElementById("movie").value + 
-    "&date=" +  document.getElementById("date").value;
+    document.location = myURL + "?id=" + document.getElementById("groceryList").value + 
+    "&note=" +  document.getElementById("note").value;
 
   }
 </script>
